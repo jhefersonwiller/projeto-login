@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+
+            </div>
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>
+                    Olá, seja bem-vindo(a) de volta. Faça login para ter acesso a área colaborativa e as
+                    configurações do ambiente.
+                </p>
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="form_style">
+                        <label for="iuser">Usuário:&nbsp;</label>
+                        <input type="text" name="user" id="iuser">
+                    </div>
+                    <div class="form_style">
+                        <label for="isenha">Senha:&nbsp;</label>
+                        <input type="password" name="senha" id="isenha">
+                    </div>
+                    <div id="input">
+                        <input id="btn_login" type="submit" value="Entrar">
+                        <input id="btn_recovery" type="submit" value="Recuperar minha senha">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

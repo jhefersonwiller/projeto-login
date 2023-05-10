@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@media all {
+    :root {
+        --verde: #49a09d;
+        --lilas: #5f2c82;
+        --azul: #1e90ff;
+        --cinza: #454647;
+        --vermelho: #f64348;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
+        background-color: #fff;
+        width: 50%;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    div#imagem {
+        background-image: url(img/solar-panels.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    div#formulario h1 {
+        padding-top: 15px;
+    }
+
+    div#formulario p {
+        text-align: justify;
+        padding: 15px 20px;
+    }
+
+    form {
+        width: 95%;
+        height: 120px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .form_style {
+        background-color: var(--lilas);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        border-radius: 10px;
+    }
+
+    input#btn_login {
+        background-color: #5baf5b;
+        color: #fff;
+    }
+
+    input#btn_login:hover {
+        background-color: #4a8f4a;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    input#btn_recovery {
+        background-color: var(--cinza);
+        color: #fff;
+    }
+
+    input#btn_recovery:hover {
+        background-color: var(--vermelho);
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        background-color: var(--lilas);
+    }
+
+    div#imagem {
+        height: 200px;
+        border-radius: 10px 10px 0 0;
+    }
+}
