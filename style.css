@@ -19,7 +19,7 @@
     html,
     body {
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-color: var(--lilas);
     }
 
@@ -35,10 +35,12 @@
         width: 250px;
         height: 500px;
         border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
         overflow: hidden;
+        transition: all 300ms ease-in-out;
     }
 
-    section div#imagem {
+    div#imagem {
         background-image: url(img/solar-panels.jpg);
         background-size: cover;
         background-repeat: no-repeat;
@@ -47,23 +49,129 @@
 
     div#formulario h1 {
         text-align: center;
+        padding-top: 8px;
     }
 
     div#formulario p {
         /* text-align: left; */
         padding: 10px;
     }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 170px;
+    }
+
+    div.form_style {
+        background-color: var(--lilas);
+        width: 90%;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    div.form_style span {
+        color: #fff;
+        margin: 6px 5px 0 6px;
+        font-size: 1.7em;
+    }
+
+    div.form_style input {
+        outline: none;
+        padding-left: 5px;
+        border-radius: 5px;
+        height: 32px;
+        border: none;
+        width: 78%;
+        position: relative;
+        top: -7px;
+    }
+
+    div.btn_style {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        height: 42%;
+    }
+
+    div.btn_style input,
+    button {
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+    div input#btn_login {
+        background-color: var(--verde);
+        color: #fff;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: position 300ms ease-in-out;
+    }
+
+    div input#btn_login:hover {
+        background-color: #43918e;
+        position: relative;
+        top: -2px;
+        left: -2px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    div button#btn_recovery {
+        background-color: var(--cinza);
+        color: #fff;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: position 300ms ease-in-out;
+    }
+
+    div button#btn_recovery:hover {
+        background-color: var(--vermelho);
+        color: #fff;
+        position: relative;
+        top: -2px;
+        left: -2px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    }
 }
 
 @media only screen and (min-width: 768px) {
-    div#imagem {
-        float: left;
-        width: 30%;
-        height: 500px;
+    section#login {
+        width: 500px;
+        height: 280px;
+        display: flex;
     }
 
-    div#formulario {
-        float: right;
-        width: 70%;
+    div#imagem {
+        width: 40%;
+        height: 100%;
+    }
+
+    div.form_style input {
+        width: 86%;
+        position: relative;
+        top: -7px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    section#login {
+        width: 600px;
+        height: 300px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    div#imagem {
+        width: 60%;
+        height: 100%;
+    }
+
+    div.form_style input {
+        width: 86%;
+        position: relative;
+        top: -7px;
     }
 }
